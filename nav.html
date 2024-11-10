@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    
+    
+    <style>
+        header{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1.875em 0.75rem;
+    background-color: #fffcf8;
+    box-shadow: 0 4px 6px rgba(139, 69, 19, 0.2);
+  }
+  nav{
+   text-align: center;
+   display: flex;
+   gap: 2em;
+  }
+  a{
+    text-decoration: none;
+    color: rgba(0, 0, 0, .55);
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.0625em;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+  button{
+    padding:0.5%;
+    background-color: #d4a762;
+    width: 12.5em;
+    height: 3.5em;
+    border-radius: 3.5em;
+    border: none; 
+    cursor: pointer;
+  }
+  .search-bar{
+    background-color:#d4a762;
+    padding: 0.75em;
+    border-radius: 3em;
+    border: none;
+  }
+  span{
+    color: #d4a762;
+  }
+  .menu-icon {
+    display: none;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+    
+@media (max-width: 576px) {
+  nav {
+    display: none;
+    flex-direction: column;
+    background-color: #fffcf8;
+    position: absolute;
+    top: 80px;
+    left: 0; 
+    width: 100%;
+    text-align: left;
+    padding-left: 1em;
+  }
+
+  nav a {
+      padding: 1em;
+      border-bottom: 1px solid #d4a762;
+  }
+
+  .menu-icon {
+      display: block;
+  }
+
+  .search-bar {
+      display: none;
+  }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="CaterServ"><h1><span>Cater</span>Service</h1></div>
+        <nav>
+            <a href="#s1">Home</a>
+            <a href="#s2">About</a>
+            <a href="#s3">Services</a>
+        
+            <a href="#s5">Menu</a>
+            
+            <a href="#s7">Contact</a>
+        </nav>
+        <div class="menu-icon"><i class="fas fa-bars"></i></div>
+    </header>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+<script>
+    const menuIcon = document.querySelector('.menu-icon');
+    const nav = document.querySelector('nav');
+
+    menuIcon.addEventListener('click', () => {
+        nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+    });
+</script>
+</body>
+</html>
